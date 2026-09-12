@@ -1,20 +1,18 @@
-# AM Broadcast Receiver — 6-transistor superhet (KiCad 9)
-
-Completed design, 2026-09-11. Schematic ERC: 0 violations. PCB DRC: 0 errors, 0 unconnected, all nets routed.
+# AM Broadcast Receiver: 6-transistor superhet (KiCad 9)
 
 ## What it is
 
-Classic 455 kHz superheterodyne AM receiver, 4.5 V (3×AA), negative ground, six 2N3904 NPN transistors:
+A classic 1960's style 455 kHz superheterodyne AM receiver, 4.5 V (3×AA), negative ground, six 2N3904 NPN transistors:
 
 | Stage | Parts |
 |---|---|
-| Antenna / tuning | L1 ferrite loopstick, VC1 2-gang polyvaricon (140 pF antenna gang, 60 pF oscillator gang, trimmers built in) |
-| Converter (mixer + local oscillator) | Q1, L2 oscillator coil (Xicon 42IF110, red), C1 emitter injection, R1/R2/R3 bias |
-| IF amp 1 with AGC | T1 (42IF101 yellow) → Q2 → T2; R4/R5/C3 form the AGC network |
-| IF amp 2 | T2 (42IF102 white) → Q3 → T3 |
-| Detector / volume | T3 (42IF103 black) → D1 1N34A germanium diode → C7 → RV1 10k log |
-| Audio driver | C8 → Q4 → T4 (Xicon 42TU013, 1k CT : 8 CT) |
-| Class-B push-pull output | Q5/Q6 → T5 (Xicon 42TU200, 200 CT : 8) → J1 speaker terminals; R14/R15 set base bias |
+| Antenna / tuning | L1 ferrite loopstick, VC1 2-gang polyvaricon (Variable Capacitor) (140 pF antenna gang, 60 pF oscillator gang, trimmers built in) |
+| Converter (mixer + local oscillator) | Q1, L2 oscillator coil (i.e. Xicon 42IF110, red), C1 emitter injection, R1/R2/R3 bias |
+| IF amp 1 with AGC | T1 (42IF101 yellow) => Q2 => T2; R4/R5/C3 form the AGC network |
+| IF amp 2 | T2 (42IF102 white) => Q3 => T3 |
+| Detector / volume | T3 (42IF103 black) => D1 1N34A germanium diode => C7 => RV1 10k log |
+| Audio driver | C8 => Q4 => T4 (Xicon 42TU013, 1k CT : 8 CT) |
+| Class-B push-pull output | Q5/Q6 => T5 (Xicon 42TU200, 200 CT : 8) => J1 speaker terminals; R14/R15 set base bias |
 | Power | BT1 3×AA, SW1 slide switch, C12; R16/C13 make the decoupled `V_RF` rail for the RF/IF stages |
 
 Detected audio is negative-going, so AGC lowers Q2's base bias on strong stations.
@@ -30,7 +28,7 @@ Detected audio is negative-going, so AGC lowers Q2's base bias on strong station
 
 ## Board
 
-180 × 62 mm, 2 layers, M3 holes in the corners. Antenna rod lies along the top edge (cable-tie holes provided), tuning cap at the left, RF chain left→right along the middle, audio chain right→left along the bottom, speaker terminal bottom-left, battery holder and power switch at the right. Full GND pour on the back. Tracks 0.6 mm (0.8–1.0 mm for GND / +BATT / V_RF), 0.2 mm clearance, 0.9/0.5 mm vias.
+180 × 62 mm, 2 layers, M3 holes in the corners. Antenna rod lies along the top edge (cable-tie holes provided), tuning cap at the left, RF chain left=>right along the middle, audio chain right=>left along the bottom, speaker terminal bottom-left, battery holder and power switch at the right. Full GND pour on the back. Tracks 0.6 mm (0.8–1.0 mm for GND / +BATT / V_RF), 0.2 mm clearance, 0.9/0.5 mm vias.
 
 ## Changes from the original sketch (please review)
 
@@ -68,4 +66,5 @@ python3 tools/build_pcb.py am-radio.net am-radio.kicad_pcb        # placed, unro
 python3 tools/finish_pcb.py routed.kicad_pcb am-radio.kicad_pcb   # GND pour + labels
 ```
 
-If you change the schematic in KiCad instead, use *Tools → Update PCB from Schematic*; footprints carry the symbol UUIDs so it matches by path.
+---
+
