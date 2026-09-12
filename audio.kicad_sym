@@ -1,0 +1,550 @@
+(kicad_symbol_lib
+	(version 20241209)
+	(generator "kicad_symbol_editor")
+	(generator_version "9.0")
+	(symbol "IF_Transformer_AM"
+		(pin_names
+			(offset 1.016)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "T1"
+			(at 0 7.874 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Transformer"
+			(at -0.508 11.176 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 -8.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "IF Transformer"
+			(at -11.938 1.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ki_keywords" "IF transformer AM radio 455kHz intermediate frequency center tap"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "IF_Transformer_AM_0_1"
+			(polyline
+				(pts
+					(xy -6.35 1.27) (xy -3.81 1.27) (xy -5.08 1.27) (xy -5.08 6.35)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -6.35 0) (xy -3.81 0) (xy -5.08 0) (xy -5.08 -6.35)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -2.54 5.08) (xy -2.54 6.35)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start -2.54 5.08)
+				(mid -1.27 3.81)
+				(end -2.54 2.54)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start -2.54 2.54)
+				(mid -1.27 1.27)
+				(end -2.54 0)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start -2.54 0)
+				(mid -1.27 -1.27)
+				(end -2.54 -2.54)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start -2.54 -2.54)
+				(mid -1.27 -3.81)
+				(end -2.54 -5.08)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -2.54 -5.08) (xy -2.54 -6.35)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 -5.715) (xy 0 5.715)
+				)
+				(stroke
+					(width 0.254)
+					(type dash)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 2.54 5.08) (xy 2.54 6.35)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start 2.54 2.54)
+				(mid 1.27 3.81)
+				(end 2.54 5.08)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start 2.54 0)
+				(mid 1.27 1.27)
+				(end 2.54 2.54)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 2.54 0) (xy 2.54 -1.27)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "IF_Transformer_AM_1_1"
+			(pin passive line
+				(at -5.08 6.35 0)
+				(length 2.54)
+				(name ""
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 -6.35 0)
+				(length 2.54)
+				(name ""
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -3.302 2.54 0)
+				(length 0.762)
+				(name ""
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 5.08 6.35 180)
+				(length 2.54)
+				(name ""
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 5.08 -1.27 180)
+				(length 2.54)
+				(name ""
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+	(symbol "Xicon_42IF10x_IFT"
+		
+		(pin_names (offset 1.016)) (exclude_from_sim no) (in_bom yes) (on_board yes)
+		(property "Reference" "T" (at 0 8.89 0) (effects (font (size 1.27 1.27))))
+		(property "Value" "42IF10x" (at 0 -8.89 0) (effects (font (size 1.27 1.27))))
+		(property "Footprint" "audio:Xicon_42IF10x" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Description" "Xicon 42IF10x 455kHz IF transformer, 10mm can. Pins 1-3 tuned tapped primary (2 = tap, 180pF internal), 4-6 secondary. Yellow=42IF101 (1st), White=42IF102 (2nd), Black=42IF103 (3rd)" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "ki_keywords" "IF transformer 455kHz AM superhet xicon" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(symbol "Xicon_42IF10x_IFT_0_1"
+			(arc (start -2.54 -5.08) (mid -3.81 -3.81) (end -2.54 -2.54) (stroke (width 0.254) (type default)) (fill (type none)))
+			(arc (start -2.54 -2.54) (mid -3.81 -1.27) (end -2.54 0.0) (stroke (width 0.254) (type default)) (fill (type none)))
+			(arc (start -2.54 0.0) (mid -3.81 1.27) (end -2.54 2.54) (stroke (width 0.254) (type default)) (fill (type none)))
+			(arc (start -2.54 2.54) (mid -3.81 3.81) (end -2.54 5.08) (stroke (width 0.254) (type default)) (fill (type none)))
+			(arc (start 2.54 -2.54) (mid 3.81 -1.27) (end 2.54 0.0) (stroke (width 0.254) (type default)) (fill (type none)))
+			(arc (start 2.54 0.0) (mid 3.81 1.27) (end 2.54 2.54) (stroke (width 0.254) (type default)) (fill (type none)))
+			(polyline (pts (xy -0.635 -6.35) (xy -0.635 6.35)) (stroke (width 0.254) (type dash)) (fill (type none)))
+			(polyline (pts (xy 0.635 -6.35) (xy 0.635 6.35)) (stroke (width 0.254) (type dash)) (fill (type none)))
+			(polyline (pts (xy -5.08 5.08) (xy -2.54 5.08)) (stroke (width 0.254) (type default)) (fill (type none)))
+			(polyline (pts (xy -5.08 -5.08) (xy -2.54 -5.08)) (stroke (width 0.254) (type default)) (fill (type none)))
+			(polyline (pts (xy -5.08 0) (xy -2.54 0)) (stroke (width 0.254) (type default)) (fill (type none)))
+			(polyline (pts (xy 2.54 2.54) (xy 2.54 5.08) (xy 5.08 5.08)) (stroke (width 0.254) (type default)) (fill (type none)))
+			(polyline (pts (xy 2.54 -2.54) (xy 2.54 -5.08) (xy 5.08 -5.08)) (stroke (width 0.254) (type default)) (fill (type none)))
+			(polyline (pts (xy -4.445 5.08) (xy -4.445 3.302)) (stroke (width 0.254) (type default)) (fill (type none)))
+			(polyline (pts (xy -5.207 3.302) (xy -3.683 3.302)) (stroke (width 0.254) (type default)) (fill (type none)))
+			(polyline (pts (xy -5.207 2.54) (xy -3.683 2.54)) (stroke (width 0.254) (type default)) (fill (type none)))
+			(polyline (pts (xy -4.445 2.54) (xy -4.445 -5.08)) (stroke (width 0.254) (type default)) (fill (type none)))
+			(rectangle (start -6.35 7.62) (end 6.35 -7.62) (stroke (width 0.127) (type default)) (fill (type none)))
+		)
+		(symbol "Xicon_42IF10x_IFT_1_1"
+			(pin passive line (at -7.62 5.08 0) (length 2.54) (name "~" (effects (font (size 1.016 1.016)))) (number "1" (effects (font (size 1.016 1.016)))))
+			(pin passive line (at -7.62 0 0) (length 2.54) (name "~" (effects (font (size 1.016 1.016)))) (number "2" (effects (font (size 1.016 1.016)))))
+			(pin passive line (at -7.62 -5.08 0) (length 2.54) (name "~" (effects (font (size 1.016 1.016)))) (number "3" (effects (font (size 1.016 1.016)))))
+			(pin passive line (at 7.62 5.08 180) (length 2.54) (name "~" (effects (font (size 1.016 1.016)))) (number "4" (effects (font (size 1.016 1.016)))))
+			(pin no_connect line (at 7.62 0 180) (length 2.54) (hide yes) (name "~" (effects (font (size 1.016 1.016)))) (number "5" (effects (font (size 1.016 1.016)))))
+			(pin passive line (at 7.62 -5.08 180) (length 2.54) (name "~" (effects (font (size 1.016 1.016)))) (number "6" (effects (font (size 1.016 1.016)))))
+		)
+		(embedded_fonts no)
+	)
+	(symbol "Xicon_42IF110_OscCoil"
+		
+		(pin_names (offset 1.016)) (exclude_from_sim no) (in_bom yes) (on_board yes)
+		(property "Reference" "L" (at 0 8.89 0) (effects (font (size 1.27 1.27))))
+		(property "Value" "42IF110" (at 0 -8.89 0) (effects (font (size 1.27 1.27))))
+		(property "Footprint" "audio:Xicon_42IF10x" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Description" "Xicon 42IF110 AM local oscillator coil (red), 10mm can. Pins 1-3 tapped tank winding (2 = tap), 4-6 feedback winding" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "ki_keywords" "oscillator coil AM superhet local oscillator xicon red" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(symbol "Xicon_42IF110_OscCoil_0_1"
+			(arc (start -2.54 -5.08) (mid -3.81 -3.81) (end -2.54 -2.54) (stroke (width 0.254) (type default)) (fill (type none)))
+			(arc (start -2.54 -2.54) (mid -3.81 -1.27) (end -2.54 0.0) (stroke (width 0.254) (type default)) (fill (type none)))
+			(arc (start -2.54 0.0) (mid -3.81 1.27) (end -2.54 2.54) (stroke (width 0.254) (type default)) (fill (type none)))
+			(arc (start -2.54 2.54) (mid -3.81 3.81) (end -2.54 5.08) (stroke (width 0.254) (type default)) (fill (type none)))
+			(arc (start 2.54 -2.54) (mid 3.81 -1.27) (end 2.54 0.0) (stroke (width 0.254) (type default)) (fill (type none)))
+			(arc (start 2.54 0.0) (mid 3.81 1.27) (end 2.54 2.54) (stroke (width 0.254) (type default)) (fill (type none)))
+			(polyline (pts (xy -0.635 -6.35) (xy -0.635 6.35)) (stroke (width 0.254) (type dash)) (fill (type none)))
+			(polyline (pts (xy 0.635 -6.35) (xy 0.635 6.35)) (stroke (width 0.254) (type dash)) (fill (type none)))
+			(polyline (pts (xy -5.08 5.08) (xy -2.54 5.08)) (stroke (width 0.254) (type default)) (fill (type none)))
+			(polyline (pts (xy -5.08 -5.08) (xy -2.54 -5.08)) (stroke (width 0.254) (type default)) (fill (type none)))
+			(polyline (pts (xy -5.08 0) (xy -2.54 0)) (stroke (width 0.254) (type default)) (fill (type none)))
+			(polyline (pts (xy 2.54 2.54) (xy 2.54 5.08) (xy 5.08 5.08)) (stroke (width 0.254) (type default)) (fill (type none)))
+			(polyline (pts (xy 2.54 -2.54) (xy 2.54 -5.08) (xy 5.08 -5.08)) (stroke (width 0.254) (type default)) (fill (type none)))
+			(rectangle (start -6.35 7.62) (end 6.35 -7.62) (stroke (width 0.127) (type default)) (fill (type none)))
+		)
+		(symbol "Xicon_42IF110_OscCoil_1_1"
+			(pin passive line (at -7.62 5.08 0) (length 2.54) (name "~" (effects (font (size 1.016 1.016)))) (number "1" (effects (font (size 1.016 1.016)))))
+			(pin passive line (at -7.62 0 0) (length 2.54) (name "~" (effects (font (size 1.016 1.016)))) (number "2" (effects (font (size 1.016 1.016)))))
+			(pin passive line (at -7.62 -5.08 0) (length 2.54) (name "~" (effects (font (size 1.016 1.016)))) (number "3" (effects (font (size 1.016 1.016)))))
+			(pin passive line (at 7.62 5.08 180) (length 2.54) (name "~" (effects (font (size 1.016 1.016)))) (number "4" (effects (font (size 1.016 1.016)))))
+			(pin no_connect line (at 7.62 0 180) (length 2.54) (hide yes) (name "~" (effects (font (size 1.016 1.016)))) (number "5" (effects (font (size 1.016 1.016)))))
+			(pin passive line (at 7.62 -5.08 180) (length 2.54) (name "~" (effects (font (size 1.016 1.016)))) (number "6" (effects (font (size 1.016 1.016)))))
+		)
+		(embedded_fonts no)
+	)
+	(symbol "Xicon_42TU013_1kCT-8CT"
+		
+		(pin_names (offset 1.016)) (exclude_from_sim no) (in_bom yes) (on_board yes)
+		(property "Reference" "T" (at 0 10.16 0) (effects (font (size 1.27 1.27))))
+		(property "Value" "42TU013-RC" (at 0 -10.16 0) (effects (font (size 1.27 1.27))))
+		(property "Footprint" "audio:Xicon_42TU200-RC" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Description" "Xicon 42TU013-RC audio transformer 1k ohm CT : 8 ohm CT, EI-24 6-pin PCB mount. Pins 1-2-3 primary (2 = CT), 4-5-6 secondary (5 = CT)" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "ki_keywords" "audio transformer driver push-pull xicon" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(symbol "Xicon_42TU013_1kCT-8CT_0_1"
+			(arc (start -2.54 -5.08) (mid -3.81 -3.81) (end -2.54 -2.54) (stroke (width 0.254) (type default)) (fill (type none)))
+			(arc (start -2.54 -2.54) (mid -3.81 -1.27) (end -2.54 0.0) (stroke (width 0.254) (type default)) (fill (type none)))
+			(arc (start -2.54 0.0) (mid -3.81 1.27) (end -2.54 2.54) (stroke (width 0.254) (type default)) (fill (type none)))
+			(arc (start -2.54 2.54) (mid -3.81 3.81) (end -2.54 5.08) (stroke (width 0.254) (type default)) (fill (type none)))
+			(arc (start 2.54 -5.08) (mid 3.81 -3.81) (end 2.54 -2.54) (stroke (width 0.254) (type default)) (fill (type none)))
+			(arc (start 2.54 -2.54) (mid 3.81 -1.27) (end 2.54 0.0) (stroke (width 0.254) (type default)) (fill (type none)))
+			(arc (start 2.54 0.0) (mid 3.81 1.27) (end 2.54 2.54) (stroke (width 0.254) (type default)) (fill (type none)))
+			(arc (start 2.54 2.54) (mid 3.81 3.81) (end 2.54 5.08) (stroke (width 0.254) (type default)) (fill (type none)))
+			(polyline (pts (xy -0.635 -6.35) (xy -0.635 6.35)) (stroke (width 0.254) (type dash)) (fill (type none)))
+			(polyline (pts (xy 0.635 -6.35) (xy 0.635 6.35)) (stroke (width 0.254) (type dash)) (fill (type none)))
+			(polyline (pts (xy -5.08 5.08) (xy -2.54 5.08)) (stroke (width 0.254) (type default)) (fill (type none)))
+			(polyline (pts (xy -5.08 -5.08) (xy -2.54 -5.08)) (stroke (width 0.254) (type default)) (fill (type none)))
+			(polyline (pts (xy -2.54 0) (xy -1.27 0) (xy -1.27 6.35)) (stroke (width 0.254) (type default)) (fill (type none)))
+			(polyline (pts (xy 2.54 5.08) (xy 5.08 5.08)) (stroke (width 0.254) (type default)) (fill (type none)))
+			(polyline (pts (xy 2.54 -5.08) (xy 5.08 -5.08)) (stroke (width 0.254) (type default)) (fill (type none)))
+			(polyline (pts (xy 2.54 0) (xy 1.27 0) (xy 1.27 -6.35)) (stroke (width 0.254) (type default)) (fill (type none)))
+			(rectangle (start -6.35 7.62) (end 6.35 -7.62) (stroke (width 0.127) (type default)) (fill (type none)))
+		)
+		(symbol "Xicon_42TU013_1kCT-8CT_1_1"
+			(pin passive line (at -7.62 5.08 0) (length 2.54) (name "~" (effects (font (size 1.016 1.016)))) (number "1" (effects (font (size 1.016 1.016)))))
+			(pin passive line (at -1.27 8.89 270) (length 2.54) (name "~" (effects (font (size 1.016 1.016)))) (number "2" (effects (font (size 1.016 1.016)))))
+			(pin passive line (at -7.62 -5.08 0) (length 2.54) (name "~" (effects (font (size 1.016 1.016)))) (number "3" (effects (font (size 1.016 1.016)))))
+			(pin passive line (at 7.62 5.08 180) (length 2.54) (name "~" (effects (font (size 1.016 1.016)))) (number "4" (effects (font (size 1.016 1.016)))))
+			(pin passive line (at 1.27 -8.89 90) (length 2.54) (name "~" (effects (font (size 1.016 1.016)))) (number "5" (effects (font (size 1.016 1.016)))))
+			(pin passive line (at 7.62 -5.08 180) (length 2.54) (name "~" (effects (font (size 1.016 1.016)))) (number "6" (effects (font (size 1.016 1.016)))))
+		)
+		(embedded_fonts no)
+	)
+	(symbol "Xicon_42TU200_200CT-8"
+		
+		(pin_names (offset 1.016)) (exclude_from_sim no) (in_bom yes) (on_board yes)
+		(property "Reference" "T" (at 0 10.16 0) (effects (font (size 1.27 1.27))))
+		(property "Value" "42TU200-RC" (at 0 -10.16 0) (effects (font (size 1.27 1.27))))
+		(property "Footprint" "audio:Xicon_42TU200-RC" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Description" "Xicon 42TU200-RC audio output transformer 200 ohm CT : 8 ohm, EI-24 6-pin PCB mount. Pins 1-2-3 primary (2 = CT), 4-6 secondary" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "ki_keywords" "audio transformer output push-pull speaker xicon" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(symbol "Xicon_42TU200_200CT-8_0_1"
+			(arc (start -2.54 -5.08) (mid -3.81 -3.81) (end -2.54 -2.54) (stroke (width 0.254) (type default)) (fill (type none)))
+			(arc (start -2.54 -2.54) (mid -3.81 -1.27) (end -2.54 0.0) (stroke (width 0.254) (type default)) (fill (type none)))
+			(arc (start -2.54 0.0) (mid -3.81 1.27) (end -2.54 2.54) (stroke (width 0.254) (type default)) (fill (type none)))
+			(arc (start -2.54 2.54) (mid -3.81 3.81) (end -2.54 5.08) (stroke (width 0.254) (type default)) (fill (type none)))
+			(arc (start 2.54 -5.08) (mid 3.81 -3.81) (end 2.54 -2.54) (stroke (width 0.254) (type default)) (fill (type none)))
+			(arc (start 2.54 -2.54) (mid 3.81 -1.27) (end 2.54 0.0) (stroke (width 0.254) (type default)) (fill (type none)))
+			(arc (start 2.54 0.0) (mid 3.81 1.27) (end 2.54 2.54) (stroke (width 0.254) (type default)) (fill (type none)))
+			(arc (start 2.54 2.54) (mid 3.81 3.81) (end 2.54 5.08) (stroke (width 0.254) (type default)) (fill (type none)))
+			(polyline (pts (xy -0.635 -6.35) (xy -0.635 6.35)) (stroke (width 0.254) (type dash)) (fill (type none)))
+			(polyline (pts (xy 0.635 -6.35) (xy 0.635 6.35)) (stroke (width 0.254) (type dash)) (fill (type none)))
+			(polyline (pts (xy -5.08 5.08) (xy -2.54 5.08)) (stroke (width 0.254) (type default)) (fill (type none)))
+			(polyline (pts (xy -5.08 -5.08) (xy -2.54 -5.08)) (stroke (width 0.254) (type default)) (fill (type none)))
+			(polyline (pts (xy -2.54 0) (xy -1.27 0) (xy -1.27 6.35)) (stroke (width 0.254) (type default)) (fill (type none)))
+			(polyline (pts (xy 2.54 5.08) (xy 5.08 5.08)) (stroke (width 0.254) (type default)) (fill (type none)))
+			(polyline (pts (xy 2.54 -5.08) (xy 5.08 -5.08)) (stroke (width 0.254) (type default)) (fill (type none)))
+			(rectangle (start -6.35 7.62) (end 6.35 -7.62) (stroke (width 0.127) (type default)) (fill (type none)))
+		)
+		(symbol "Xicon_42TU200_200CT-8_1_1"
+			(pin passive line (at -7.62 5.08 0) (length 2.54) (name "~" (effects (font (size 1.016 1.016)))) (number "1" (effects (font (size 1.016 1.016)))))
+			(pin passive line (at -1.27 8.89 270) (length 2.54) (name "~" (effects (font (size 1.016 1.016)))) (number "2" (effects (font (size 1.016 1.016)))))
+			(pin passive line (at -7.62 -5.08 0) (length 2.54) (name "~" (effects (font (size 1.016 1.016)))) (number "3" (effects (font (size 1.016 1.016)))))
+			(pin passive line (at 7.62 5.08 180) (length 2.54) (name "~" (effects (font (size 1.016 1.016)))) (number "4" (effects (font (size 1.016 1.016)))))
+			(pin no_connect line (at 1.27 -8.89 90) (length 2.54) (hide yes) (name "~" (effects (font (size 1.016 1.016)))) (number "5" (effects (font (size 1.016 1.016)))))
+			(pin passive line (at 7.62 -5.08 180) (length 2.54) (name "~" (effects (font (size 1.016 1.016)))) (number "6" (effects (font (size 1.016 1.016)))))
+		)
+		(embedded_fonts no)
+	)
+	(symbol "Polyvaricon_2G_AM"
+		
+		(pin_names (offset 1.016)) (exclude_from_sim no) (in_bom yes) (on_board yes)
+		(property "Reference" "VC" (at 5.08 1.27 0) (effects (font (size 1.27 1.27))))
+		(property "Value" "CBM-223P" (at 5.08 -1.27 0) (effects (font (size 1.27 1.27))))
+		(property "Footprint" "audio:Polyvaricon_CBM-223P_Wired" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Description" "2-gang polyvaricon AM tuning capacitor (e.g. CBM-223P: 140pF antenna + 60pF oscillator, trimmers built in). A = antenna gang, O = oscillator gang, G = common/frame" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "ki_keywords" "variable capacitor tuning polyvaricon varicap AM" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(symbol "Polyvaricon_2G_AM_0_1"
+			(polyline (pts (xy -4.064 0.635) (xy -1.016 0.635)) (stroke (width 0.381) (type default)) (fill (type none)))
+			(polyline (pts (xy -4.064 -0.635) (xy -1.016 -0.635)) (stroke (width 0.381) (type default)) (fill (type none)))
+			(polyline (pts (xy -2.54 2.54) (xy -2.54 0.635)) (stroke (width 0.254) (type default)) (fill (type none)))
+			(polyline (pts (xy -2.54 -0.635) (xy -2.54 -2.54)) (stroke (width 0.254) (type default)) (fill (type none)))
+			(polyline (pts (xy -4.445 -1.905) (xy -0.635 1.905)) (stroke (width 0.254) (type default)) (fill (type none)))
+			(polyline (pts (xy -0.635 1.905) (xy -1.6400000000000001 1.7)) (stroke (width 0.254) (type default)) (fill (type none)))
+			(polyline (pts (xy -0.635 1.905) (xy -0.8400000000000001 0.9)) (stroke (width 0.254) (type default)) (fill (type none)))
+			(polyline (pts (xy 1.016 0.635) (xy 4.064 0.635)) (stroke (width 0.381) (type default)) (fill (type none)))
+			(polyline (pts (xy 1.016 -0.635) (xy 4.064 -0.635)) (stroke (width 0.381) (type default)) (fill (type none)))
+			(polyline (pts (xy 2.54 2.54) (xy 2.54 0.635)) (stroke (width 0.254) (type default)) (fill (type none)))
+			(polyline (pts (xy 2.54 -0.635) (xy 2.54 -2.54)) (stroke (width 0.254) (type default)) (fill (type none)))
+			(polyline (pts (xy 0.635 -1.905) (xy 4.445 1.905)) (stroke (width 0.254) (type default)) (fill (type none)))
+			(polyline (pts (xy 4.445 1.905) (xy 3.44 1.7)) (stroke (width 0.254) (type default)) (fill (type none)))
+			(polyline (pts (xy 4.445 1.905) (xy 4.24 0.9)) (stroke (width 0.254) (type default)) (fill (type none)))
+			(polyline (pts (xy -2.54 -2.54) (xy 2.54 -2.54)) (stroke (width 0.254) (type default)) (fill (type none)))
+			(polyline (pts (xy 0 -2.54) (xy 0 -2.54)) (stroke (width 0.254) (type default)) (fill (type none)))
+			(polyline (pts (xy -2.54 1.905) (xy 2.54 1.905)) (stroke (width 0.254) (type dash)) (fill (type none)))
+		)
+		(symbol "Polyvaricon_2G_AM_1_1"
+			(pin passive line (at -2.54 5.08 270) (length 2.54) (name "O" (effects (font (size 1.016 1.016)))) (number "3" (effects (font (size 1.016 1.016)))))
+			(pin passive line (at 2.54 5.08 270) (length 2.54) (name "A" (effects (font (size 1.016 1.016)))) (number "1" (effects (font (size 1.016 1.016)))))
+			(pin passive line (at 0 -5.08 90) (length 2.54) (name "G" (effects (font (size 1.016 1.016)))) (number "2" (effects (font (size 1.016 1.016)))))
+		)
+		(embedded_fonts no)
+	)
+	(symbol "Ferrite_Rod_Antenna_Coil"
+		
+		(pin_names (offset 1.016)) (exclude_from_sim no) (in_bom yes) (on_board yes)
+		(property "Reference" "L" (at 0 8.89 0) (effects (font (size 1.27 1.27))))
+		(property "Value" "AM loopstick" (at 0 -8.89 0) (effects (font (size 1.27 1.27))))
+		(property "Footprint" "audio:Ferrite_Rod_Antenna_Coil" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Description" "AM broadcast ferrite rod (loopstick) antenna coil. 1-2 = tuned primary (~330-600uH, resonates with 140pF gang), 3-4 = low impedance coupling secondary" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "ki_keywords" "antenna ferrite rod loopstick AM coil" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(symbol "Ferrite_Rod_Antenna_Coil_0_1"
+			(arc (start -2.54 -5.08) (mid -3.81 -3.81) (end -2.54 -2.54) (stroke (width 0.254) (type default)) (fill (type none)))
+			(arc (start -2.54 -2.54) (mid -3.81 -1.27) (end -2.54 0.0) (stroke (width 0.254) (type default)) (fill (type none)))
+			(arc (start -2.54 0.0) (mid -3.81 1.27) (end -2.54 2.54) (stroke (width 0.254) (type default)) (fill (type none)))
+			(arc (start -2.54 2.54) (mid -3.81 3.81) (end -2.54 5.08) (stroke (width 0.254) (type default)) (fill (type none)))
+			(arc (start 2.54 -2.54) (mid 3.81 -1.27) (end 2.54 0.0) (stroke (width 0.254) (type default)) (fill (type none)))
+			(arc (start 2.54 0.0) (mid 3.81 1.27) (end 2.54 2.54) (stroke (width 0.254) (type default)) (fill (type none)))
+			(rectangle (start -1.016 6.35) (end 1.016 -6.35) (stroke (width 0.254) (type default)) (fill (type outline)))
+			(polyline (pts (xy -5.08 5.08) (xy -2.54 5.08)) (stroke (width 0.254) (type default)) (fill (type none)))
+			(polyline (pts (xy -5.08 -5.08) (xy -2.54 -5.08)) (stroke (width 0.254) (type default)) (fill (type none)))
+			(polyline (pts (xy 2.54 2.54) (xy 2.54 5.08) (xy 5.08 5.08)) (stroke (width 0.254) (type default)) (fill (type none)))
+			(polyline (pts (xy 2.54 -2.54) (xy 2.54 -5.08) (xy 5.08 -5.08)) (stroke (width 0.254) (type default)) (fill (type none)))
+		)
+		(symbol "Ferrite_Rod_Antenna_Coil_1_1"
+			(pin passive line (at -7.62 5.08 0) (length 2.54) (name "~" (effects (font (size 1.016 1.016)))) (number "1" (effects (font (size 1.016 1.016)))))
+			(pin passive line (at -7.62 -5.08 0) (length 2.54) (name "~" (effects (font (size 1.016 1.016)))) (number "2" (effects (font (size 1.016 1.016)))))
+			(pin passive line (at 7.62 5.08 180) (length 2.54) (name "~" (effects (font (size 1.016 1.016)))) (number "3" (effects (font (size 1.016 1.016)))))
+			(pin passive line (at 7.62 -5.08 180) (length 2.54) (name "~" (effects (font (size 1.016 1.016)))) (number "4" (effects (font (size 1.016 1.016)))))
+		)
+		(embedded_fonts no)
+	)
+	(symbol "V_RF"
+		(power)
+		(pin_names (offset 1.016)) (exclude_from_sim no) (in_bom no) (on_board no)
+		(property "Reference" "#PWR" (at 0 -3.81 0) (effects (font (size 1.27 1.27))))
+		(property "Value" "V_RF" (at 0 3.556 0) (effects (font (size 1.27 1.27))))
+		(property "Footprint" "" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Description" "Power symbol: decoupled supply rail for converter and IF stages" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "ki_keywords" "power-flag" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(symbol "V_RF_0_1"
+			(polyline (pts (xy -0.762 1.27) (xy 0 2.54)) (stroke (width 0) (type default)) (fill (type none)))
+			(polyline (pts (xy 0 0) (xy 0 2.54)) (stroke (width 0) (type default)) (fill (type none)))
+			(polyline (pts (xy 0 2.54) (xy 0.762 1.27)) (stroke (width 0) (type default)) (fill (type none)))
+		)
+		(symbol "V_RF_1_1"
+			(pin power_in line (at 0 0 90) (length 0) (hide yes) (name "V_RF" (effects (font (size 1.016 1.016)))) (number "1" (effects (font (size 1.016 1.016)))))
+		)
+		(embedded_fonts no)
+	)
+)
