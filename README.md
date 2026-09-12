@@ -13,9 +13,8 @@ A classic 1960's style 455 kHz superheterodyne AM receiver, 4.5 V (3×AA), negat
 | Detector / volume | T3 (42IF103 black) => D1 1N34A germanium diode => C7 => RV1 10k log |
 | Audio driver | C8 => Q4 => T4 (Xicon 42TU013, 1k CT : 8 CT) |
 | Class-B push-pull output | Q5/Q6 => T5 (Xicon 42TU200, 200 CT : 8) => J1 speaker terminals; R14/R15 set base bias |
-| Power | BT1 3×AA, SW1 slide switch, C12; R16/C13 make the decoupled `V_RF` rail for the RF/IF stages |
-
-Detected audio is negative-going, so AGC lowers Q2's base bias on strong stations.
+| Power | BT1 3×AA, SW1 slide switch, C12; R16/C13 make the decoupled `V_RF` rail for the RF/IF stages 
+|Detected audio is negative-side, so AGC lowers Q2's base bias on strong stations.
 
 ## Files
 
@@ -34,10 +33,6 @@ Detected audio is negative-going, so AGC lowers Q2's base bias on strong station
 
 - **VC1 footprint is unverified.** No reliable drawing of the CBM-223P terminal layout exists online, so the footprint is a "wired" one: 20 × 20 mm outline, three solder pads (O, G, A) along the bottom edge for short leads, and two 2.7 mm holes for M2.5 mounting screws on a guessed 15 mm spacing. Measure your part and adjust `gen_libs.py` (or edit the footprint) if you want it to drop straight in.
 - **Oscillator phasing.** If the oscillator does not start, swap the L2 pin 4 / pin 6 feedback leads (the 42IF110 datasheet does not give winding sense).
-- **T4 as a driver transformer** is the weakest part choice: a 1k CT : 8 Ω CT part drives the output bases with very low impedance, so audio gain is modest. A 10k : 2k CT driver transformer (Xicon 42TM018, different footprint) would be the textbook part. Kept because it shares the footprint you already made.
-- **Resistor footprint** is the DIN0204 3.6 mm / 5.08 mm pitch you chose (1/8 W minis). Standard 1/4 W resistors need the DIN0207 7.62 mm footprint; change `FP_R` in `tools/gen_sch.py` and regenerate if so.
-- **Battery holder** is the BH-331P you chose (58 × 48 mm); it dominates the board size.
-- D1: 1N34A is a DO-7 part on a DO-35 10.16 mm footprint (fits). 1N60 or BAT46 also work.
 
 ## Alignment
 
