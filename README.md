@@ -1,4 +1,4 @@
-# AM Broadcast Receiver: 6-transistor superhet (KiCad 9)
+# AM Broadcast Receiver: 6-transistor superhet KiCad
 
 ## What it is
 
@@ -30,16 +30,7 @@ Detected audio is negative-going, so AGC lowers Q2's base bias on strong station
 
 180 × 62 mm, 2 layers, M3 holes in the corners. Antenna rod lies along the top edge (cable-tie holes provided), tuning cap at the left, RF chain left=>right along the middle, audio chain right=>left along the bottom, speaker terminal bottom-left, battery holder and power switch at the right. Full GND pour on the back. Tracks 0.6 mm (0.8–1.0 mm for GND / +BATT / V_RF), 0.2 mm clearance, 0.9/0.5 mm vias.
 
-## Changes from the original sketch (please review)
-
-1. **Transistors are now 2N3904 NPN.** The sketch used 2N3906 PNP but tied the emitters to battery negative, which cannot bias. Keeping negative ground and switching to NPN was the smaller change. Use 2N3906 only if you also flip the battery, the electrolytics and D1.
-2. **Transistor symbol fixed.** `Simulation_SPICE:PNP` numbers C=1, B=2, E=3, but the TO-92 footprint's pad 1 is the emitter. The new symbols map E=1, B=2, C=3.
-3. **Transformer symbols now have 6 pins** matching the 6-pad footprint (2 = primary CT, 5 = secondary CT). The old 5-pin symbol put a speaker lead on the centre-tap pad.
-4. **Values:** the 100 µF across the output transformer primary became 22 nF (C11); 10 nF across the driver primary (C10); the bias divider for the output pair is 4k7/680 (was 4k7/10 Ω, which would have biased the bases at the rail).
-5. **Re-annotated left to right** (Q1 = converter … Q5/Q6 = output). References differ from the sketch.
-6. Added everything that was missing: converter, oscillator coil, tuning capacitor, antenna coil, third IF transformer, detector, AGC, volume control, decoupled RF rail, power switch, power flags, mounting holes.
-
-## Things to verify before ordering
+## Things to verify before ordering a PCB
 
 - **VC1 footprint is unverified.** No reliable drawing of the CBM-223P terminal layout exists online, so the footprint is a "wired" one: 20 × 20 mm outline, three solder pads (O, G, A) along the bottom edge for short leads, and two 2.7 mm holes for M2.5 mounting screws on a guessed 15 mm spacing. Measure your part and adjust `gen_libs.py` (or edit the footprint) if you want it to drop straight in.
 - **Oscillator phasing.** If the oscillator does not start, swap the L2 pin 4 / pin 6 feedback leads (the 42IF110 datasheet does not give winding sense).
@@ -67,4 +58,5 @@ python3 tools/finish_pcb.py routed.kicad_pcb am-radio.kicad_pcb   # GND pour + l
 ```
 
 ---
+2026 - Gordon Young WA8Q
 
