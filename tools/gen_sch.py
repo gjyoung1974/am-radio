@@ -254,7 +254,7 @@ wire(T5.p(4), (317.5, 83.82), (317.5, 91.44), J1.p(1))
 wire(T5.p(6), (317.5, 99.06), (317.5, 93.98), J1.p(2))
 
 # ---- Power: battery, switch, decoupling, RF rail
-BT1 = Sym("Device", "Battery", "BT1", "3xAA 4.5V", (330.2, 137.16), footprint="Battery:BatteryHolder_TruPower_BH-331P_3xAA")
+BT1 = Sym("Device", "Battery", "BT1", "3xAAA 4.5V", (330.2, 137.16), footprint="Battery:BatteryHolder_Keystone_2479_3xAAA")
 SW1 = Sym("Switch", "SW_SPDT", "SW1", "POWER", (337.82, 127.0), footprint="Button_Switch_THT:SW_Slide_SPDT_Straight_CK_OS102011MS2Q")
 wire(BT1.p(1), (330.2, 127.0), SW1.p(2)); nc(SW1.p(3))
 C12 = CP("C12", "100u", (345.44, 135.89))
@@ -272,10 +272,10 @@ wire(BT1.p(2), (335.28, 142.24)); FLAG((335.28, 142.24), 180)
 
 # ---- Mounting holes
 for i, x in enumerate((380.0, 388.0, 396.0, 404.0), 1):
-    Sym("Mechanical", "MountingHole", f"H{i}", "M3", (x, 137.16), footprint="MountingHole:MountingHole_3.2mm_M3")
+    Sym("Mechanical", "MountingHole", f"H{i}", "M2.5", (x, 137.16), footprint="MountingHole:MountingHole_2.7mm_M2.5")
 
 # ---- Notes
-text("AM BROADCAST RECEIVER - 6 transistor superheterodyne, 455 kHz IF, 4.5 V (3xAA), negative ground, all 2N3904 NPN", 20.32, 40.64, 2.5)
+text("AM BROADCAST RECEIVER - 6 transistor superheterodyne, 455 kHz IF, 4.5 V (3xAAA), negative ground, all 2N3904 NPN", 20.32, 40.64, 2.5)
 text("Stages:  Q1 converter (mixer + local oscillator, L2 red)  ->  T1 (yellow)  ->  Q2 IF amp with AGC  ->  T2 (white)  ->  Q3 IF amp  ->  T3 (black)  ->  D1 detector  ->  RV1 volume  ->  Q4 driver  ->  T4  ->  Q5/Q6 class-B push-pull  ->  T5  ->  8 ohm speaker", 20.32, 46.99, 1.5)
 text("Alignment: set VC1 fully closed, adjust L2 slug so the local oscillator is ~985 kHz (station at 530 kHz); at the high end use the VC1 oscillator trimmer for ~2055 kHz (1600 kHz). Peak T1, T2, T3 slugs for max audio on a weak station (they are pre-tuned to 455 kHz). Peak L1 by sliding the coil on the rod at the low end and the VC1 antenna trimmer at the high end. If the oscillator does not start, swap the L2 pin 4/6 feedback leads.", 20.32, 156.21, 1.5)
 text("AGC: D1 delivers negative-going audio + DC. R5/C3 filter it onto the Q2 base bias node; strong stations reduce Q2 bias and gain. V_RF is the 330R/100u decoupled rail for the RF/IF stages. Electrolytics: C3, C9, C12, C13 + up; C8 + toward Q4 base.", 20.32, 162.56, 1.5)

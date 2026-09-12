@@ -2,7 +2,7 @@
 
 ## What it is
 
-A classic 1960's style 455 kHz superheterodyne AM receiver, 4.5 V (3×AA), negative ground, six 2N3904 NPN transistors:
+A classic 1960's style 455 kHz superheterodyne AM receiver, 4.5 V (3×AAA), negative ground, six 2N3904 NPN transistors:
 
 | Stage | Parts |
 |---|---|
@@ -13,7 +13,7 @@ A classic 1960's style 455 kHz superheterodyne AM receiver, 4.5 V (3×AA), negat
 | Detector / volume | T3 (42IF103 black) => D1 1N34A germanium diode => C7 => RV1 10k log |
 | Audio driver | C8 => Q4 => T4 (Xicon 42TU013, 1k CT : 8 CT) |
 | Class-B push-pull output | Q5/Q6 => T5 (Xicon 42TU200, 200 CT : 8) => J1 speaker terminals; R14/R15 set base bias |
-| Power | BT1 3×AA, SW1 slide switch, C12; R16/C13 make the decoupled `V_RF` rail for the RF/IF stages 
+| Power | BT1 3×AAA (Keystone 2479 board-mount holder), SW1 slide switch, C12; R16/C13 make the decoupled `V_RF` rail for the RF/IF stages 
 |Detected audio is negative-side, so AGC lowers Q2's base bias on strong stations.
 
 ## Files
@@ -27,11 +27,29 @@ A classic 1960's style 455 kHz superheterodyne AM receiver, 4.5 V (3×AA), negat
 
 ## Board
 
-180 × 62 mm, 2 layers, M3 holes in the corners. Antenna rod lies along the top edge (cable-tie holes provided), tuning cap at the left, RF chain left=>right along the middle, audio chain right=>left along the bottom, speaker terminal bottom-left, battery holder and power switch at the right. Full GND pour on the back. Tracks 0.6 mm (0.8–1.0 mm for GND / +BATT / V_RF), 0.2 mm clearance, 0.9/0.5 mm vias.
+110 × 83 × 1.6 mm, 2 layers, sized to the 3D-printed case in `case/case.FCStd` (rev 1.1; the 180 × 62 mm rev 1.0 board is kept in `am-radio-backups/rev1.0-180x62/`).
+
+Case fit (all taken from the FreeCAD model):
+
+| Item | Value |
+|---|---|
+| Case | 115 × 88 × 35 mm, 2 mm walls, open top; cavity 111 × 84 mm |
+| Board | 110 × 83 mm, 0.5 mm clearance per side |
+| Standoffs | 4, Ø6 mm, 18 mm tall on the 2 mm base; board top face at 21.6 mm |
+| Mounting holes | 2.7 mm (M2.5 self-tapping into the 2.5 mm standoff holes), centres 2.3 mm in from each edge = 105.4 × 78.4 mm pattern; 6.4 mm copper-free keepouts on both sides |
+| Speaker | 76 mm square, 16 mm deep, centred under the board (board x 4.5–80.5, y 3.5–79.5); only 2 mm between it and the back of the board, so nothing is mounted on the back |
+| Speaker leads | 3.5 mm pass-through hole at board (107.3, 67.5) next to J1, in the 29 mm strip east of the speaker where there is 18 mm under the board |
+| Height above board | 13.4 mm to the top of the case: fine for the 10 mm IF cans and TO-92s; **check** the Keystone 2479 holder (≈13 mm), the 42TU audio transformers, and plan lid holes for the VC1 and RV1 shafts and a side slot for SW1 (it sits 4 mm from the right wall) |
+| Case CornerHole | the 12 × 12 mm hole in the base plate (case X 46–58, Y 20–32) is under board x 88.5–100.5, y 9.5–21.5; only top-side parts (T2, L1, C12) are above it, so nothing on the board depends on it |
+
+Coordinates: board x = case X + 42.5, board y = 41.5 − case Y (board origin top-left, y down, as in KiCad).
+
+Layout: ferrite rod along the top edge with the tuning cap in the top-left corner (terminals facing the rod), 3×AAA holder standing on end along the left edge, RF chain left => right across the middle (L2, Q1, T1, Q2, T2, Q3) with T3 turning down the right edge, detector and volume pot below it, driver T4 on end in the middle, push-pull pair below it, output transformer T5 bottom-right with the speaker terminal block and wire hole beside it, power switch and C12 in the top-right corner. Full GND pour on the back. Tracks 0.6 mm (0.8–1.0 mm for GND / +BATT / V_RF), 0.2 mm clearance, 0.9/0.5 mm vias, 0.5 mm hole-to-hole.
 
 ## Things to verify before ordering a PCB
 
 - **VC1 footprint is unverified.** No reliable drawing of the CBM-223P terminal layout exists online, so the footprint is a "wired" one: 20 × 20 mm outline, three solder pads (O, G, A) along the bottom edge for short leads, and two 2.7 mm holes for M2.5 mounting screws on a guessed 15 mm spacing. Measure your part and adjust `gen_libs.py` (or edit the footprint) if you want it to drop straight in.
+- **Battery holder height.** The 3×AA holder (60 × 50 × 16 mm) did not fit the case, so BT1 is now a Keystone 2479 3×AAA holder (53.6 × 38.6 mm footprint, about 13 mm tall). Confirm its height against the 13.4 mm left above the board, or use a wired 3×AAA pack fixed to the lid and solder the leads to the BT1 pads.
 - **Oscillator phasing.** If the oscillator does not start, swap the L2 pin 4 / pin 6 feedback leads (the 42IF110 datasheet does not give winding order?).
 
 ## Alignment
@@ -47,9 +65,13 @@ A classic 1960's style 455 kHz superheterodyne AM receiver, 4.5 V (3×AA), negat
 python3 tools/gen_libs.py                       # symbols + footprints
 python3 tools/gen_sch.py                        # schematic
 kicad-cli sch export netlist --format kicadsexpr -o am-radio.net am-radio.kicad_sch
-python3 tools/build_pcb.py am-radio.net am-radio.kicad_pcb        # placed, unrouted board
-# route with KiCadRoutingTools route.py, then:
-python3 tools/finish_pcb.py routed.kicad_pcb am-radio.kicad_pcb   # GND pour + labels
+python3 tools/build_pcb.py am-radio.net placed.kicad_pcb          # placed, unrouted board (110 x 83, case holes, wire hole)
+python3 ~/src/KiCadRoutingTools/route.py placed.kicad_pcb routed.kicad_pcb \
+    --track-width 0.6 --clearance 0.2 --via-size 0.9 --via-drill 0.5 \
+    --power-nets GND V_RF +BATT --power-nets-widths 0.8 0.8 1.0 \
+    --board-edge-clearance 0.5 --hole-to-hole-clearance 0.5
+python3 tools/finish_pcb.py routed.kicad_pcb am-radio.kicad_pcb   # GND pour, standoff keepouts, stub cleanup, labels
+kicad-cli pcb drc --schematic-parity --severity-all am-radio.kicad_pcb
 ```
 
 ---
